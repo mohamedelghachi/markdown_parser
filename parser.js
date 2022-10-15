@@ -1,5 +1,7 @@
 const markdownParser = (text) => {
     const toHTML = text
+        .replace(/^###### (.*$)/gim, '<h6>$1</h6>') // h6 tag
+        .replace(/^##### (.*$)/gim, '<h5>$1</h5>') // h5 tag
         .replace(/^#### (.*$)/gim, '<h4>$1</h4>') // h4 tag
         .replace(/^### (.*$)/gim, '<h3>$1</h3>') // h3 tag
         .replace(/^## (.*$)/gim, '<h2>$1</h2>') // h2 tag
@@ -8,7 +10,9 @@ const markdownParser = (text) => {
         .replace(/\*(.*)\*/gim, '<i>$1</i>') // italic text
         .replace(/([^\n]+)(\+)([^\n]+)/gim, "<ul><li>$3</li></ul>")// list
         .replace( /(")([^\n,])(")/gim,'<a style="background-color:grey;color:black;text-decoration: none;border-radius: 3px;padding:0 2px;">$2</a>')//highlights
-        .replace(/^@(.*$)/gim, '<mark>$1</mark>'); // marquage du texte
+        .replace(/^@(.*$)/gim, '<mark>$1</mark>') // marquage du texte
+        .replace(/\_(.*)\_/gim, '<u>$1</u>') // underlined text
+        .replace(/\-(.*)\-/gim, '<span style="text-decoration:line-through">$1</span>'); // line through text
 
     return toHTML.trim(); // using trim method to remove whitespace
 }
