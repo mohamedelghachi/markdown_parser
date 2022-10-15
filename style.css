@@ -16,3 +16,7 @@ padding-right: 10px;
 textarea{
 width: 100%;
 }
+.border{
+  border: 1px solid;
+  box-shadow: 1px 1px 1px 1px;
+}

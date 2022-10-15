@@ -12,7 +12,8 @@ const markdownParser = (text) => {
         .replace( /(")([^\n,])(")/gim,'<a style="background-color:grey;color:black;text-decoration: none;border-radius: 3px;padding:0 2px;">$2</a>')//highlights
         .replace(/^@(.*$)/gim, '<mark>$1</mark>') // marquage du texte
         .replace(/\_(.*)\_/gim, '<u>$1</u>') // underlined text
-        .replace(/\-(.*)\-/gim, '<span style="text-decoration:line-through">$1</span>'); // line through text
+        .replace(/\-(.*)\-/gim, '<span style="text-decoration:line-through">$1</span>') // line through text
+        .replace(/^_ (.*$)/gim, '<a class="border">$1</a>'); //text with border
 
     return toHTML.trim(); // using trim method to remove whitespace
 }
