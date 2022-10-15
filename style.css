@@ -1,6 +1,6 @@
 .body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -17,7 +17,7 @@
 .result {
   border-style: solid;
   border-width: 1px;
-  width: 100vw;
+  width: 50vw;
   height: 50vh;
   text-align: center;
   background-color: aqua;
