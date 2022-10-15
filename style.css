@@ -1,6 +1,24 @@
-.result{
-    border-style: solid;
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.result {
+  border-style: solid;
   border-width: 1px;
-  width: 50%;
+  width: 100vw;
+  height: 50vh;
+  text-align: center;
   background-color: aqua;
 }
