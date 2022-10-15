@@ -5,27 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown_Parset </title>
+    <title>Parser</title>
     <script src="parser.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="body">
-        <form onsubmit="converter(event)">
-            <label for="originalText">Original text:</label>
-
-            <textarea id="originalText" name="originalText" rows="5" cols="33">
-
-        </textarea>
-            <input type="submit" value="Convert">
-        </form>
-        <div>
-            <p class="result" id="div_result">
-                The result will be rendred in this erea
-            </p>
-        </div>
-    </div>
+    <div id="container">
+    <form onsubmit="converter(event)">
+<br>
+        <textarea id="originalText" name="originalText" rows="5" >
+Original text
+    </textarea>
+    <br>
+        <input type="submit" value="Convert">
+    </form>
+        <p class="result" id="div_result">
+            The result will be rendred in this erea
+        </p>
+    
+</div>
 </body>
 
 </html>
