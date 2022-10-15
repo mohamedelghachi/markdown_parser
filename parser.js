@@ -9,10 +9,11 @@ const markdownParser = (text) => {
         .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>') // bold text
         .replace(/\*(.*)\*/gim, '<i>$1</i>') // italic text
         .replace(/([^\n]+)(\+)([^\n]+)/gim, "<ul><li>$3</li></ul>")// list
+        .replace(/\-(.*)\-/gim, '<span style="text-decoration:line-through">$1</span>') // line through text
         .replace( /(")([^\n,])(")/gim,'<a style="background-color:grey;color:black;text-decoration: none;border-radius: 3px;padding:0 2px;">$2</a>')//highlights
+        .replace(/(`)(\s?[^\n,]+\s?)(`)/gim,'<a style="background-color:grey;color:black;text-decoration: none;border-radius: 3px;padding:0 2px;">$2</a>')//highlights
         .replace(/^@(.*$)/gim, '<mark>$1</mark>') // marquage du texte
-        .replace(/\_(.*)\_/gim, '<u>$1</u>') // underlined text
-        .replace(/\-(.*)\-/gim, '<span style="text-decoration:line-through">$1</span>'); // line through text
+        .replace(/\_(.*)\_/gim, '<u>$1</u>'); // underlined text
 
     return toHTML.trim(); // using trim method to remove whitespace
 }
