@@ -1,24 +1,18 @@
-.body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.body form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-}
-
-
-.result {
+.result{
   border-style: solid;
-  border-width: 1px;
-  width: 50vw;
-  height: 50vh;
-  /*text-align: center;*/
-  background-color: aqua;
+border-width: 1px;
+width: 50%;
+padding-left: 10px;
+background-color: aqua;
+}
+#container{
+width: 100%;
+display: flex;
+}
+form{
+width: 50%;
+padding-right: 10px;
+}
+textarea{
+width: 100%;
 }
